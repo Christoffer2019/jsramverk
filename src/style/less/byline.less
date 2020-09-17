@@ -1,0 +1,27 @@
+/**
+ * Style for byline
+ */
+
+ @byline-img-width: 8.5em;
+ @byline-margin: 1.5em;
+
+
+@media (min-width: @breakpoint-small + 1px) {
+    .byline {
+        display: flex;
+        flex-direction: row;
+    
+        & .byline-text {
+            width: calc(100% - @byline-margin - @byline-img-width);
+            margin-left: @byline-margin;
+    
+            & p {
+                font-size: 0.9em;
+            }
+        }
+    
+        & .byline-image {
+            width: @byline-img-width;
+        }
+    }
+}

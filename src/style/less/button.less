@@ -1,0 +1,58 @@
+/**
+ * Style for buttons
+ */
+
+.button {
+    width: 100%;
+    display: inline-block;
+    padding: @button-padding;
+    text-align: center;
+    font-size: @button-font-size;
+    border-radius: @button-border-radius;
+    margin-bottom: ~"@{line-height}rem";
+}
+
+.green-button {
+    background-color: @button-bg-green;
+    color: @button-green;
+    border: @button-border-size solid @button-border-green;
+}
+
+.green-button:active,
+.green-button:hover {
+    background-color: @button-bg-green-hover;
+    color: @button-color-hover;
+    border: @button-border-size solid @button-border-hover-color;
+}
+
+.blue-button {
+    background-color: @button-bg-blue;
+    color: @button-blue;
+    border: @button-border-size solid @button-border-blue;
+}
+
+.blue-button:active,
+.blue-button:hover {
+    background-color: @button-bg-blue-hover;
+    color: @button-color-hover;
+    border: @button-border-size solid @button-border-hover-color;
+}
+
+.red-button {
+    background-color: @button-bg-red;
+    color: @button-red;
+    border: @button-border-size solid @button-border-red;
+}
+
+.red-button:active,
+.red-button:hover {
+    background-color: @button-bg-red-hover;
+    color: @button-color-hover;
+    border: @button-border-size solid @button-border-hover-color;
+}
+
+@media only screen and (min-width: @breakpoint-small) {
+    .button {
+        width: auto;
+    }
+}

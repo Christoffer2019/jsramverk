@@ -1,0 +1,65 @@
+/** 
+ * Style for tables
+ */
+
+table {
+    margin-bottom: @table-margin-bottom;
+}
+
+.standard-table {
+    td,
+    th {
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        padding-right: 1rem;
+    }
+}
+
+.table-stacked {
+    display: block;
+
+    tr {
+        display: block;
+        margin-bottom: @table-margin-bottom;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td {
+        display: block;
+        border: none;
+        border-bottom: 1px solid @td-border-bottom-color;
+        position: relative;
+        padding-left: 50%;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        white-space: normal;
+        text-align: right;
+
+        &:before {
+            content: attr(data-title);
+            display: inline-block;
+            position: absolute;
+            width: 45%;
+            left: 0;
+            padding-right: 0.5rem;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+        }
+    }
+}
+
+.table-striped td:nth-of-type(2n) {
+    background-color: @table-stripe-bg-color;
+    color: @table-stripe-color;
+}
+
+.table-striped-row tr:nth-of-type(2n) {
+    background-color: @table-stripe-bg-color;
+    color: @table-stripe-color;
+}

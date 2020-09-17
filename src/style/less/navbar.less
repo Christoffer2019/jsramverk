@@ -1,0 +1,119 @@
+/**
+ * Style for navbar
+ */
+
+.nav {
+    overflow: hidden;
+    width: 100%;
+    z-index: 100;
+    background-color: @navbar-bg-color;
+    height: @navbar-height;
+
+    & .desktop-nav-items {
+        margin: 0;
+        background-color: @navbar-bg-color;
+
+        
+
+        & .nav-item {
+            padding: @navbar-item-padding;
+            float: left;
+
+            & .icon,
+            & .icon-text {
+                background-color: transparent;
+                color: @navbar-color;
+            }
+
+            & .icon {
+                padding-right: @navbar-item-padding;
+            }
+
+            &:hover {
+                background-color: @navbar-bg-color-hover;
+                color: @navbar-color-hover;
+                transition-duration: @trans-dur-short;
+
+                & .icon,
+                & .icon-text {
+                    background-color: inherit;
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    #logo {
+        & .logo-text {
+            float: left;
+            color: @navbar-color;
+            padding: @navbar-item-padding;
+        }
+
+        & .logo-image {
+            float: left;
+            width: @navbar-height;
+            height: @navbar-height;
+        }
+
+        &:hover {
+            color: @accentColor;
+            transition-duration: @trans-dur-short;
+
+            & .logo-text {
+                color: inherit;
+            }
+        }
+    }
+}
+
+.active {
+    background-color: @navbar-bg-color-active !important;
+    color: @navbar-color-active !important;
+}
+
+@media (max-width: @breakpoint-small) {
+    .nav {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+
+    .nav,
+    .desktop-nav-items {
+        background-color: @navbar-bg-color-dark;
+    }
+
+    #logo {
+        display: none;
+    }
+}
+
+@media (min-width: @breakpoint-small + 1px) {
+    .nav .desktop-nav-items .dropdown:hover {
+        & .dropdown-content {
+            display: block;
+        }
+    }
+
+    .nav .desktop-nav-items {
+        & .dropdown {
+            height: @navbar-height;
+            float: left;
+
+            & .dropdown-content {
+                display: none;
+                position: absolute;
+                top: @navbar-height;
+                overflow-y: auto;
+                max-height: calc(80vh - @navbar-height);
+                z-index: 103;
+                background-color: @navbar-bg-color;
+
+                & .dropdown-item {
+                    border-top: 1px solid @navbar-color;
+                }
+            }
+        }
+    }
+}

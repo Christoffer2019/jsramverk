@@ -1,0 +1,61 @@
+/**
+ * Style for forms
+ */
+
+label {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.form-new-delivery textarea {
+    height: 10em;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.4em;
+    margin-top: 0;
+    margin-bottom: 0.9rem;
+}
+
+input,
+select {
+    &:valid {
+        border: 1px solid @button-bg-green;
+    }
+
+    &:invalid {
+        border: 1px solid @alert-color;
+    }
+}
+
+@media only screen and (min-width: @breakpoint-small) {
+    label {
+        width: 25%;
+        margin-right: 5%;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 70%;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .form-button {
+        width: 70%;
+        margin-left: 30%;
+    }
+
+    .form-button-small {
+        width: 25%;
+        margin-left: 5%;
+    }
+}

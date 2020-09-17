@@ -1,0 +1,185 @@
+/**
+ * Minimalistic theme
+ */
+
+
+/**
+ * Normalize and reset the style.
+ */
+
+@import "normalize.min.css";
+
+
+ /*
+ * Import Google Fonts and Material Icons
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons&family=Playfair+Display:ital,wght@0,700;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/**
+ * Import style for icons
+ */
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "../icofont/icofont.min.css";
+
+
+/**
+ * Import less modules
+ */
+
+@import "base.less";
+@import "footer.less";
+@import "typography.less";
+@import "images.less";
+@import "links.less";
+@import "navbar.less";
+@import "tables.less";
+@import "button.less";
+@import "forms.less";
+@import "icons.less";
+@import "byline.less";
+
+
+/**
+ * Variables for less modules
+ */
+
+/**
+ * Transition duration
+ */
+
+ @trans-dur-short: 0.25s;
+
+
+ /**
+  * Responsive
+  */
+
+@breakpoint-small: 650px;
+@breakpoint-medium: 900px;
+
+/**
+ * Width
+ */
+
+ @main-max-width: 37em;
+
+/**
+ * Height 
+ */
+
+@line-height: 1.4;
+@main-min-height: 30em;
+@navbar-height: 2.8em;
+
+/**
+ * Margin
+ */
+
+@img-margin-bottom: 1.4rem;
+@table-margin-bottom: @img-margin-bottom;
+@main-margin-top-bottom: ~"@{line-height}rem";
+
+/**
+ * Padding
+ */
+
+@body-padding-bottom: 2.3em;
+@main-padding-left-right: 0.6rem;
+@root-padding-top: @body-padding-bottom;
+@sidebar-padding-left: 3em;
+
+@navbar-item-padding: 0.8em;
+
+@link-to-top-page-pos-right: 1rem;
+@link-to-top-page-pos-bottom: 1rem;
+
+@th-td-padding-top-bottom: 0.3em;
+@th-td-padding-left-right: 0.5em;
+
+@footer-padding-top-bottom: ~"@{line-height}rem";
+@footer-padding-left-right: @main-padding-left-right;
+@footer-column-pading: 1.5em;
+@footer-main-padding: @footer-column-pading;
+
+@button-padding: 0.6em;
+
+/**
+ * Colors
+ */
+
+@alert-color: rgb(160, 5, 5);
+@accentColor: #FFD021;
+@accentColorDark: #F69D3F;
+
+@html-color: rgb(49, 49, 49);
+
+@navbar-bg-color: @html-color;
+@navbar-bg-color-dark: rgb(32, 32, 32);
+@navbar-bg-color-hover: @accentColor; //rgb(110, 110, 110);
+@navbar-bg-color-active: @accentColor;
+
+@mobile-navbar-bg-color: rgba(39, 39, 39, 0.87);
+@mobile-navbar-bg-blur: blur(4px);
+
+@navbar-color: rgb(185, 185, 185);
+@navbar-color-hover: rgb(255, 255, 255);
+@navbar-color-active: @html-color;
+
+@a-color: @html-color;
+@a-color-hover: @accentColor;
+
+@footer-bg-color: @navbar-bg-color;
+@footer-color: @navbar-color;
+@footer-a-color-hover: @navbar-color-hover;
+
+
+/**
+ * Fonts
+ */
+
+@font-family-headers: 'Playfair Display', 'Cambria', Georgia, serif;
+@font-family-html: 'Source Sans Pro', Verdana, 'Geneva', Tahoma, 'sans-serif';
+@th-font-size: 1.2rem;
+@p-font-size: 1rem;
+@button-font-size: 1.2rem;
+
+/**
+ * Tables
+ */
+
+ @table-stripe-bg-color: rgb(90, 90, 90);
+ @table-stripe-color: rgb(230, 230, 230);
+ @td-border-bottom-color: black;
+
+/**
+ * Buttons
+ */
+
+ // green
+@button-bg-green: rgb(17, 99, 17);
+@button-green: @navbar-color-hover;
+@button-border-green: rgb(10, 58, 10);
+@button-bg-green-hover: @button-border-green;
+
+// blue
+@button-bg-blue: rgb(12, 41, 95);
+@button-blue: @navbar-color-hover;
+@button-border-blue: rgb(5, 29, 59);
+@button-bg-blue-hover: @button-border-blue;
+
+// red
+@button-bg-red: rgb(150, 20, 20);
+@button-red: @navbar-color-hover;
+@button-border-red: rgb(88, 4, 4);
+@button-bg-red-hover: @button-border-red;
+
+// hover
+@button-color-hover: rgb(210, 210, 210);
+@button-border-hover-color: black;
+
+// border
+@button-border-radius: 0.2rem;
+@button-border-size: 1px;

@@ -1,0 +1,41 @@
+/**
+ * Base style
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: @font-family-html;
+    font-size: 100%;
+    color: @html-color;
+}
+
+body {
+    line-height: @line-height;
+}
+
+main {
+    padding: @main-margin-top-bottom @main-padding-left-right;
+    max-width: @main-max-width;
+}
+
+@media only screen and (min-width: @breakpoint-medium) {
+    .outer-wrap-main {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        max-width: fit-content;
+    }
+
+    main {
+        min-height: @main-min-height;
+    }
+
+    .sidebar {
+        padding: @main-margin-top-bottom @main-padding-left-right @main-margin-top-bottom @sidebar-padding-left;
+        min-width: 20em;
+        max-width: 30em;
+    }
+}

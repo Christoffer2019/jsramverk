@@ -1,0 +1,29 @@
+/**
+ * Style for images
+ */
+
+img {
+    margin-bottom: @img-margin-bottom;
+    max-width: 100%;
+}
+
+.container img {
+    width: 100%;
+}
+
+.flash-image {
+    width: 100%;
+    height: 60vh;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: @breakpoint-medium + 1px) {
+    .flash-image {
+        height: 40vh;
+    }
+}

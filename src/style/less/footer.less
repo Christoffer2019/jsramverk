@@ -1,0 +1,46 @@
+/**
+ * Style for footer
+ */
+
+.footer {
+    background-color: @footer-bg-color;
+    color: @footer-color;
+    padding: @footer-padding-top-bottom @footer-padding-left-right;
+    & a {
+        color: @footer-color;
+        text-decoration: none;
+        &:hover {
+            color: @footer-a-color-hover;
+        }
+    }
+
+    & .footer-main {
+        border-top: 1px solid @footer-color;
+        padding-top: @footer-main-padding;
+    }
+}
+
+@media (min-width: @breakpoint-medium + 1px) {
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3 {
+        width: 33.33%;
+        padding: @footer-column-pading;
+    }
+
+    .footer-main {
+        padding: @footer-main-padding;
+        text-align: center;
+    }
+
+    .footer-columns {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: @breakpoint-small) {
+    .footer {
+        margin-bottom: @navbar-height - 0.2em;
+    }
+}
