@@ -1,20 +1,27 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "christoffers-website-for-course-jsramverk",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "app-root-path": "^3.0.0",
+    "less": "^3.12.2",
+    "markdown-it": "^11.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "style": "lessc src/style/less/main.less src/style/css/style.min.css",
+    "pandoc-readme": "pandoc README.md -f markdown -t markdown -o src/markdown/README.md",
+    "pandoc-week1": "pandoc src/markdown/reports/week-1-report.md src/markdown/README.md -f markdown -t markdown -o src/markdown/reports/week-1-main.md"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-root-import": "^6.5.0"
   }
 }
