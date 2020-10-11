@@ -14,7 +14,7 @@
  * Import Google Fonts and Material Icons
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons&family=Playfair+Display:ital,wght@0,700;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
 /**
@@ -65,6 +65,7 @@
  */
 
  @main-max-width: 37em;
+ @dropdown-content-arrow-width: 2.5; //em
 
 /**
  * Height 
@@ -91,7 +92,8 @@
 @root-padding-top: @body-padding-bottom;
 @sidebar-padding-left: 3em;
 
-@navbar-item-padding: 0.8em;
+@navbar-item-padding: 0.75em;
+@nav-item-padding-left: 1.8em;
 
 @link-to-top-page-pos-right: 1rem;
 @link-to-top-page-pos-bottom: 1rem;
@@ -110,27 +112,31 @@
  * Colors
  */
 
+// Accent
 @alert-color: rgb(160, 5, 5);
-@accentColor: #FFD021;
-@accentColorDark: #F69D3F;
+@accentColor: #61DAFB;
 
-@html-color: rgb(49, 49, 49);
+@html-color: #20232A;
 
-@navbar-bg-color: @html-color;
-@navbar-bg-color-dark: rgb(32, 32, 32);
-@navbar-bg-color-hover: @accentColor; //rgb(110, 110, 110);
-@navbar-bg-color-active: @accentColor;
+// Navbar
+@navbar-bg-color: #20232A;
+@navbar-color: #dadae4;
 
-@mobile-navbar-bg-color: rgba(39, 39, 39, 0.87);
-@mobile-navbar-bg-blur: blur(4px);
+@navbar-bg-color-hover: @navbar-bg-color-active;
+@navbar-color-hover: #61DAFB;
 
-@navbar-color: rgb(185, 185, 185);
-@navbar-color-hover: rgb(255, 255, 255);
-@navbar-color-active: @html-color;
+@navbar-bg-color-active: @navbar-color;
+@navbar-color-active: @navbar-bg-color;
 
+@navbar-arrow-bg-color: #16181D;
+
+// Links
 @a-color: @html-color;
 @a-color-hover: @accentColor;
 
+@scroll-to-top-color-hover: #16181D;
+
+// Footer
 @footer-bg-color: @navbar-bg-color;
 @footer-color: @navbar-color;
 @footer-a-color-hover: @navbar-color-hover;
@@ -142,9 +148,12 @@
 
 @font-family-headers: 'Playfair Display', 'Cambria', Georgia, serif;
 @font-family-html: 'Source Sans Pro', Verdana, 'Geneva', Tahoma, 'sans-serif';
+@font-family-navbar: @font-family-headers;
 @th-font-size: 1.2rem;
 @p-font-size: 1rem;
 @button-font-size: 1.2rem;
+@dropdown-content-arrow-font-size: 1.2em;
+
 
 /**
  * Tables
