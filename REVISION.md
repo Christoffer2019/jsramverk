@@ -28,5 +28,20 @@ v1.0.0 (2020-09-17)
 * CSS files
 * manifest
 
-v2.0.0 (2020-10-DD)
+v1.1.0 (2020-10-11)
 -------------------
+
+### Added
+
+* script for Font Awesome in public/index.html
+
+### Changed
+
+* REVISION history
+* src/App.js:
+    * added scroll-to-top arrow
+    * updated mobile menu
+    * added CSS class "active" to show active link in menu
+* flash image and logo
+* footer text
+* some CSS and LESS files
