@@ -20,7 +20,6 @@ class Footer extends Component {
                         <h3>Referenser</h3>
                         <p>
                             Bilder:
-                            <a href="https://stock.adobe.com/"> AdobeStock</a>,
                             <a href="https://pixabay.com"> Pixabay</a>,
                             <a href="https://favicon.io/"> favicon.ico</a>
                         </p>
